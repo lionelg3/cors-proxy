@@ -1,5 +1,9 @@
 # CORS Proxy
 
+Page Web: [https://cors-test-srv.appspot.com/](https://cors-test-srv.appspot.com/)
+
+Endpoint: [https://cors-test-srv.appspot.com/cors](https://cors-test-srv.appspot.com/cors)
+
 ## C'est quoi ? 
 
 CORS Proxy est un simple outil permettant de proxifier les requêtes HTTP 

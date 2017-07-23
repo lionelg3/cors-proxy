@@ -1,6 +1,8 @@
 # CORS Proxy
 
-https://cors-test-srv.appspot.com/
+Home page: [https://cors-test-srv.appspot.com/](https://cors-test-srv.appspot.com/)
+
+Endpoint: [https://cors-test-srv.appspot.com/cors](https://cors-test-srv.appspot.com/cors)
 
 ## What is it ? 
 

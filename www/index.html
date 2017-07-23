@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <!--
     <nav class="navbar navbar-default navbar-static-top navbar-inverse">
         <div class="container">
             <ul class="nav navbar-nav">
@@ -39,49 +40,38 @@
             </ul>
         </div>
     </nav>
-
+    -->
     <div class="container">
         <div class="row">
-            <div>
-                <h1 class="page-header" id="whatiscorsproxy">
-                    <a class="anchorjs-link " href="#whatiscorsproxy" 
-                        style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                    What is CORS Proxy ?
-                </h1>
-                <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
-                <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-            </div>
+            <h1 id="toc_0">CORS Proxy</h1>
 
+<p>CORS Proxy endpoint https://cors-test-srv.appspot.com/cors</p>
 
-            <div>
-                <h1 class="page-header" id="moreaboutcors">
-                    <a class="anchorjs-link " href="#moreaboutcors" 
-                        style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                    More about CORS
-                </h1>
-                <p class="lead">Indicate the current page's location within a navigational hierarchy.</p>
-                <p>Separators are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-            </div>
+<h2 id="toc_1">What is it ?</h2>
 
+<p>CORS Proxy is a simple tool that can be use to proxify HTTP GET requests 
+into CORS GET, POST or PUT requests. This tool is not made form prodution,
+its&#39; goal is to visualise the &quot;preflight&quot; request call made before a CORS
+request made with PUT.</p>
 
+<h2 id="toc_2">How to use it ?</h2>
 
-            <div>
-                <h1 class="page-header" id="www.metaweather.com">
-                    <a class="anchorjs-link " href="#www.metaweather.com" 
-                        style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: inherit; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-                    www.metaweather.com
-                </h1>
-                <p class="lead">MetaWeather is an automated weather data aggregator that takes the weather predictions from various forecasters and calculates the most likely outcome.</p>
-                <p>The MetaWeather is based on the <code>GET</code> method with a great <a href="https://www.metaweather.com/api/">API</a> and doesn't need any auth token.</p>
-                <p>Using CORS Proxy, you can use MetaWeather with <code>GET, POST</code> or <code>PUT</code> method and the same <a href="https://www.metaweather.com/api/">API</a>.</p>
-                <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" class="btn btn-group-xs">GET</button>
-                    <button type="button" class="btn btn-group-xs">POST</button>
-                    <button type="button" class="btn btn-group-xs" >PUT</button>
-                </div>
-            </div>
+<p>Since the goal is to see the &quot;preflight&quot; request call made before a CORS,
+the request must be made from another &quot;Origin&quot; than the server one. 
+I use the web site <a href="http://www.test-cors.org">http://www.test-cors.org</a>.
+This site is made for this.</p>
+
+<p>Using GET method:</p>
+
+<p><a href="http://www.test-cors.org/#?client_method=GET&amp;client_credentials=false&amp;server_url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors%3Ftarget%3Dhttps%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&amp;server_enable=true&amp;server_status=200&amp;server_credentials=false&amp;server_tabs=remote">http://www.test-cors.org/#?client<em>method=GET&amp;client</em>credentials=false&amp;server<em>url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors%3Ftarget%3Dhttps%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&amp;server</em>enable=true&amp;server<em>status=200&amp;server</em>credentials=false&amp;server_tabs=remote</a></p>
+
+<p>Using POST method:</p>
+
+<p><a href="http://www.test-cors.org/#?client_method=POST&amp;client_credentials=false&amp;client_headers=Content-Type%3A%20application%2Fx-www-form-urlencoded&amp;client_postdata=target%3Dhttps%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&amp;server_url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors&amp;server_enable=true&amp;server_status=200&amp;server_credentials=false&amp;server_tabs=remote">http://www.test-cors.org/#?client<em>method=POST&amp;client</em>credentials=false&amp;client<em>headers=Content-Type%3A%20application%2Fx-www-form-urlencoded&amp;client</em>postdata=target%3Dhttps%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&amp;server<em>url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors&amp;server</em>enable=true&amp;server<em>status=200&amp;server</em>credentials=false&amp;server_tabs=remote</a></p>
+
+<p>Using PUT method (now you will seen the preflight OPTIONS request):</p>
+
+<p><a href="http://www.test-cors.org/#?client_method=PUT&amp;client_credentials=false&amp;client_postdata=%7B%22target%22%3A%22https%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F%22%7D%0A&amp;server_url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors&amp;server_enable=true&amp;server_status=200&amp;server_credentials=false&amp;server_tabs=remote&amp;client_headers=content-type%3A%20application%2Fjson">http://www.test-cors.org/#?client<em>method=PUT&amp;client</em>credentials=false&amp;client<em>postdata=%7B%22target%22%3A%22https%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F%22%7D%0A&amp;server</em>url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors&amp;server<em>enable=true&amp;server</em>status=200&amp;server<em>credentials=false&amp;server</em>tabs=remote&amp;client_headers=content-type%3A%20application%2Fjson</a></p>
         </div>
     </div>
 
