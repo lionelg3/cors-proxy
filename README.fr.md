@@ -18,7 +18,7 @@ permet de tester la validiter d'un appel CORS.
 
 Utiliser la méthode GET:
 
-[http://www.test-cors.org/#?client_method=GET&client_credentials=false&server_url=https%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&server_enable=true&server_status=200&server_credentials=false&server_tabs=remote](http://www.test-cors.org/#?client_method=GET&client_credentials=false&server_url=https%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&server_enable=true&server_status=200&server_credentials=false&server_tabs=remote)
+[http://www.test-cors.org/#?client_method=GET&client_credentials=false&server_url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors%3Ftarget%3Dhttps%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&server_enable=true&server_status=200&server_credentials=false&server_tabs=remote](http://www.test-cors.org/#?client_method=GET&client_credentials=false&server_url=https%3A%2F%2Fcors-test-srv.appspot.com%2Fcors%3Ftarget%3Dhttps%3A%2F%2Fwww.metaweather.com%2Fapi%2Flocation%2F615702%2F&server_enable=true&server_status=200&server_credentials=false&server_tabs=remote)
 
 
 Utiliser la méthode POST:
