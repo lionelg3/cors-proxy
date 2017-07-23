@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var request = require('request');
 
 var CORS = "/cors";
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -80,7 +80,7 @@ app.options(CORS, (req, res, next) => {
     res.end();
 });
 
-app.listen(PORT, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(PORT, () => {
+    console.log('CORS Proxy app listening on port %s!', PORT);
 });
 
