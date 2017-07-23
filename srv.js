@@ -38,7 +38,9 @@ app.get(CORS, (req, res, next) => {
 // POST PROXY
 app.post(CORS, (req, res, next) => {
     if (req.body == undefined || req.body.target == undefined) {
-        res.send('ko');
+        res.statusCode = 500;
+        res.setHeader('content-type', 'text/plain');
+        res.send('ko \nreq.body:' + JSON.stringify(req.body)+'\ntarget: '+JSON.stringify(req.body.target));
         next();
         return;
     }
@@ -56,7 +58,9 @@ app.post(CORS, (req, res, next) => {
 // PUT PROXY
 app.put(CORS, (req, res, next) => {
     if (req.body == undefined || req.body.target == undefined) {
-        res.send('ko');
+        res.statusCode = 500;
+        res.setHeader('content-type', 'text/plain');
+        res.send('ko \nreq.body:' + JSON.stringify(req.body)+'\ntarget: '+JSON.stringify(req.body.target));
         next();
         return;
     }
